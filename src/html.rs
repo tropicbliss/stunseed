@@ -45,8 +45,10 @@ pub unsafe trait NonVoidHtmlElement: HtmlElement {
         Self: 'static + Send + Sync + Clone,
     {
         let dom_node = child.get_dom_node();
+        let mut children = Vec::with_capacity(1);
+        children.push(dom_node);
         unsafe {
-            self.get_dom_element_mut().set_children(vec![dom_node]);
+            self.get_dom_element_mut().set_children(children);
         }
         Box::new(self)
     }
