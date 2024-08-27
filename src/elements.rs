@@ -109,12 +109,12 @@ where
     Box::new(Text(value.into()))
 }
 
-#[inline]
-pub fn include_html<T>(value: T) -> Box<Text>
-where
-    T: Into<SmartString>,
-{
-    text(value)
+#[macro_export]
+macro_rules! include_html {
+    ($path:expr) => {{
+        let source = include_str!($path);
+        text(source)
+    }};
 }
 
 impl HtmlNode for Text {
