@@ -109,6 +109,14 @@ where
     Box::new(Text(value.into()))
 }
 
+#[inline]
+pub fn include_html<T>(value: T) -> Box<Text>
+where
+    T: Into<SmartString>,
+{
+    text(value)
+}
+
 impl HtmlNode for Text {
     fn get_dom_node(&self) -> DomNode {
         DomNode::TextNode(self.0.clone())
