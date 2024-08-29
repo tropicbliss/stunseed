@@ -21,6 +21,7 @@ macro_rules! impl_html_element {
     };
 }
 
+#[inline]
 pub fn builder<F>(closure: F) -> Box<dyn HtmlNode>
 where
     F: FnOnce() -> Box<dyn HtmlNode>,
@@ -28,6 +29,7 @@ where
     closure()
 }
 
+#[inline]
 pub fn constify(closure: fn() -> Box<dyn HtmlNode>) -> Box<dyn HtmlNode> {
     static CONSTANT: OnceLock<Box<dyn HtmlNode>> = OnceLock::new();
     dyn_clone::clone_box(&**CONSTANT.get_or_init(closure))
