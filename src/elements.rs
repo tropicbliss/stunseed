@@ -49,7 +49,7 @@ where
 macro_rules! include_html {
     ($path:expr) => {{
         let source = include_str!($path);
-        text(source)
+        crate::elements::text(source)
     }};
 }
 
