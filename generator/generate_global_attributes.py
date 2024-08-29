@@ -17,6 +17,20 @@ def build_int_attribute(function_name, doc, canonical):
     }}
 """
 
+def build_float_attribute(function_name, doc, canonical):
+    doc = replace_strings(doc)
+    return f"""
+#[doc = "{doc}"]
+    #[inline]
+    fn {function_name}(mut self: Box<Self>, value: f64) -> Box<Self> {{
+        self.get_dom_element_mut().insert_attribute(
+            "{canonical}",
+            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+        );
+        self
+    }}
+"""
+
 def build_string_attribute(function_name, doc, canonical):
     doc = replace_strings(doc)
     return f"""
@@ -60,6 +74,8 @@ with open("data/manual/global_attributes.json", 'r') as file:
                 glo_attr_res += build_bool_attribute(attribute["field_name"], attribute["description"], attribute["name"])
             case "Integer":
                 glo_attr_res += build_int_attribute(attribute["field_name"], attribute["description"], attribute["name"])
+            case "Float":
+                glo_attr_res += build_float_attribute(attribute["field_name"], attribute["description"], attribute["name"])
 
 glo_attr_res += "}"
 
