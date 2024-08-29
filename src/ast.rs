@@ -1,10 +1,9 @@
-use smartstring::alias::String;
-use std::collections::HashMap;
+use std::{borrow::Cow, collections::HashMap};
 
 #[derive(Clone)]
 pub enum DomNode {
     Element(DomElement),
-    TextNode(String),
+    TextNode(Cow<'static, str>),
 }
 
 #[derive(Clone)]
@@ -58,6 +57,6 @@ impl DomElement {
 
 #[derive(Clone)]
 pub enum AttributeValue {
-    KeyValuePair(String),
+    KeyValuePair(Cow<'static, str>),
     BooleanAttribute(bool),
 }

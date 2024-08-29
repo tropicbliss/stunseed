@@ -1,6 +1,9 @@
-use crate::ast::{AttributeValue, DomElement, DomNode};
+use crate::{
+    ast::{AttributeValue, DomElement, DomNode},
+    utils,
+};
 use dyn_clone::DynClone;
-use smartstring::alias::String;
+use std::borrow::Cow;
 
 pub trait HtmlElement: Clone {
     fn get_dom_element_mut(&mut self) -> &mut DomElement;
@@ -10,12 +13,30 @@ pub trait HtmlElement: Clone {
     #[inline]
     fn add_custom_attribute<T>(mut self: Box<Self>, key: &'static str, value: T) -> Box<Self>
     where
-        T: Into<String>,
+        T: Into<Cow<'static, str>>,
     {
         self.get_dom_element_mut()
             .insert_attribute(key, AttributeValue::KeyValuePair(value.into()));
         self
     }
+
+    #[inline]
+    fn add_custom_boolean_attribute(
+        mut self: Box<Self>,
+        key: &'static str,
+        value: bool,
+    ) -> Box<Self> {
+        self.get_dom_element_mut()
+            .insert_attribute(key, AttributeValue::BooleanAttribute(value));
+        self
+    }
+}
+
+#[macro_export]
+macro_rules! data_key {
+    ($key:expr) => {
+        concat!("data-", $key)
+    };
 }
 
 impl<T> HtmlNode for T
@@ -45,8 +66,7 @@ pub unsafe trait NonVoidHtmlElement: HtmlElement {
         Self: 'static + Send + Sync + Clone,
     {
         let dom_node = child.get_dom_node();
-        let mut children = Vec::with_capacity(1);
-        children.push(dom_node);
+        let children = utils::create_single_element_vec(dom_node);
         unsafe {
             self.get_dom_element_mut().set_children(children);
         }
