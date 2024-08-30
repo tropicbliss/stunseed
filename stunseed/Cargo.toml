@@ -11,7 +11,6 @@ repository = "https://github.com/tropicbliss/stunseed"
 rust-version = "1.70"
 
 [dependencies]
-ammonia = "4.0"
 dyn-clone = "1.0"
 itoa = "1.0"
 ryu = "1.0"
