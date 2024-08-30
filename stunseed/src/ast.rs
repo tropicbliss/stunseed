@@ -1,5 +1,7 @@
 use std::{borrow::Cow, collections::HashMap};
 
+use crate::utils::is_valid_html_attribute_key;
+
 #[derive(Clone)]
 pub enum DomNode {
     Element(DomElement),
@@ -8,9 +10,9 @@ pub enum DomNode {
 
 #[derive(Clone)]
 pub struct DomElement {
-    name: &'static str,
-    attributes: HashMap<&'static str, AttributeValue>,
-    children: Option<Vec<DomNode>>,
+    pub(crate) name: &'static str,
+    pub(crate) attributes: HashMap<&'static str, AttributeValue>,
+    pub(crate) children: Option<Vec<DomNode>>,
 }
 
 impl DomElement {
@@ -43,6 +45,7 @@ impl DomElement {
     }
 
     pub fn insert_attribute(&mut self, key: &'static str, value: AttributeValue) {
+        assert!(is_valid_html_attribute_key(key), "attribute key is invalid");
         self.attributes.insert(key, value);
     }
 

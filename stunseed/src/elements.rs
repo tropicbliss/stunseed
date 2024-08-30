@@ -19,9 +19,12 @@ use stunseed_derive::HtmlElement;
 include!("generated/gen_elements.rs");
 
 impl Html {
-    /// Emits unsanitized HTML.
     pub fn build(self) -> String {
-        html_builder(self.inner)
+        html_builder(self.inner, true)
+    }
+
+    pub fn build_unsanitized(self) -> String {
+        html_builder(self.inner, false)
     }
 
     #[inline]
