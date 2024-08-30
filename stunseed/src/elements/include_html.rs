@@ -9,6 +9,6 @@ macro_rules! include_html {
 #[macro_export]
 macro_rules! embed_html {
     ($source:expr) => {{
-        crate::elements::text::text($source)
+        stunseed::elements::text::text($source)
     }};
 }
