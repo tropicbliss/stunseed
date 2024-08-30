@@ -425,6 +425,16 @@ dependencies = [
  "ammonia",
  "dyn-clone",
  "stacker",
+ "stunseed-derive",
+]
+
+[[package]]
+name = "stunseed-derive"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
