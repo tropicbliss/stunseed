@@ -26,3 +26,20 @@ pub fn is_valid_html_attribute_key(s: &str) -> bool {
     }
     true
 }
+
+pub fn is_valid_element_name(s: &str) -> bool {
+    let mut chars = s.chars();
+    if let Some(first_char) = chars.next() {
+        if !first_char.is_ascii_alphabetic() {
+            return false;
+        }
+    } else {
+        return false;
+    }
+    for c in chars {
+        if !(c.is_ascii_alphanumeric() || c == '-' || c == '_' || c == ':' || c == '.') {
+            return false;
+        }
+    }
+    true
+}

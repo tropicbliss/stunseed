@@ -19,7 +19,6 @@ fn parse_element(
     clean: bool,
 ) -> String {
     let mut result = String::with_capacity(70);
-    let name = escape_builder(name, clean);
     result.push('<');
     result.push_str(&name);
     for (key, value) in attributes {
