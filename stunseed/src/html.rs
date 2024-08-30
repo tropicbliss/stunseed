@@ -1,3 +1,5 @@
+use std::borrow::Cow;
+
 use crate::{
     ast::{AttributeValue, DomElement, DomNode},
     utils,
@@ -12,11 +14,21 @@ pub trait HtmlElement: Clone {
     #[inline]
     fn add_custom_attribute<T>(mut self: Box<Self>, key: &'static str, value: T) -> Box<Self>
     where
-        T: ToString,
+        T: Into<Cow<'static, str>>,
     {
         self.get_dom_element_mut()
-            .insert_attribute(key, AttributeValue::KeyValuePair(value.to_string().into()));
+            .insert_attribute(key, AttributeValue::KeyValuePair(value.into()));
         self
+    }
+
+    #[inline]
+    fn add_custom_integer_attribute(self: Box<Self>, key: &'static str, value: i64) -> Box<Self> {
+        self.add_custom_attribute(key, value.to_string())
+    }
+
+    #[inline]
+    fn add_custom_float_attribute(self: Box<Self>, key: &'static str, value: f64) -> Box<Self> {
+        self.add_custom_attribute(key, value.to_string())
     }
 
     #[inline]
