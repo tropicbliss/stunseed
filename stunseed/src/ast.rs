@@ -1,4 +1,3 @@
-use crate::utils::{is_valid_element_name, is_valid_html_attribute_key};
 use std::{borrow::Cow, collections::HashMap};
 
 #[derive(Clone)]
@@ -24,7 +23,6 @@ impl DomElement {
     }
 
     pub fn new_void(name: &'static str) -> Self {
-        assert!(is_valid_element_name(name), "element name is invalid");
         DomElement {
             name,
             attributes: HashMap::new(),
@@ -45,7 +43,6 @@ impl DomElement {
     }
 
     pub fn insert_attribute(&mut self, key: &'static str, value: AttributeValue) {
-        assert!(is_valid_html_attribute_key(key), "attribute key is invalid");
         self.attributes.insert(key, value);
     }
 

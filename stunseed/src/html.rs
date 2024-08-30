@@ -1,6 +1,6 @@
 use crate::{
     ast::{AttributeValue, DomElement, DomNode},
-    utils,
+    utils::{self, is_valid_html_attribute_key},
 };
 use dyn_clone::DynClone;
 use std::borrow::Cow;
@@ -15,6 +15,7 @@ pub trait HtmlElement: Clone {
     where
         T: Into<Cow<'static, str>>,
     {
+        assert!(is_valid_html_attribute_key(key), "attribute key is invalid");
         self.get_dom_element_mut()
             .insert_attribute(key, AttributeValue::KeyValuePair(value.into()));
         self
