@@ -10,7 +10,7 @@ fn generate_html() -> String {
 fn component() -> Box<dyn HtmlNode> {
     div().children(vec![a()
         .href("https://www.example.com")
-        .target("_blank")
+        .target("_blank")])
 }
 ```
 
