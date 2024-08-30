@@ -219,9 +219,11 @@ impl Anchor {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -229,9 +231,11 @@ impl Anchor {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -252,9 +256,11 @@ impl Anchor {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -471,9 +477,11 @@ impl Anchor {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -563,9 +571,11 @@ impl Anchor {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -632,9 +642,11 @@ impl Anchor {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -642,9 +654,11 @@ impl Anchor {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -665,9 +679,11 @@ impl Anchor {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -685,9 +701,11 @@ impl Anchor {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -708,9 +726,11 @@ impl Anchor {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -718,9 +738,11 @@ impl Anchor {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -728,9 +750,11 @@ impl Anchor {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -853,9 +877,11 @@ impl Abbreviation {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -863,9 +889,11 @@ impl Abbreviation {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -886,9 +914,11 @@ impl Abbreviation {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1079,9 +1109,11 @@ impl Abbreviation {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1171,9 +1203,11 @@ impl Abbreviation {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1240,9 +1274,11 @@ impl Abbreviation {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1250,9 +1286,11 @@ impl Abbreviation {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1273,9 +1311,11 @@ impl Abbreviation {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1293,9 +1333,11 @@ impl Abbreviation {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1316,9 +1358,11 @@ impl Abbreviation {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1326,9 +1370,11 @@ impl Abbreviation {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1336,9 +1382,11 @@ impl Abbreviation {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1474,9 +1522,11 @@ impl Address {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1484,9 +1534,11 @@ impl Address {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1507,9 +1559,11 @@ impl Address {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1726,9 +1780,11 @@ impl Address {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1818,9 +1874,11 @@ impl Address {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1887,9 +1945,11 @@ impl Address {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1897,9 +1957,11 @@ impl Address {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1920,9 +1982,11 @@ impl Address {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1940,9 +2004,11 @@ impl Address {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1963,9 +2029,11 @@ impl Address {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1973,9 +2041,11 @@ impl Address {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -1983,9 +2053,11 @@ impl Address {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -2796,9 +2868,11 @@ impl Article {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -2832,9 +2906,11 @@ impl Article {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -3712,9 +3788,11 @@ impl Bold {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -3722,9 +3800,11 @@ impl Bold {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -3745,9 +3825,11 @@ impl Bold {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -3938,9 +4020,11 @@ impl Bold {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4030,9 +4114,11 @@ impl Bold {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4099,9 +4185,11 @@ impl Bold {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4109,9 +4197,11 @@ impl Bold {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4132,9 +4222,11 @@ impl Bold {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4152,9 +4244,11 @@ impl Bold {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4175,9 +4269,11 @@ impl Bold {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4185,9 +4281,11 @@ impl Bold {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4195,9 +4293,11 @@ impl Bold {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4362,9 +4462,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4372,9 +4474,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4395,9 +4499,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4588,9 +4694,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4680,9 +4788,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4749,9 +4859,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4759,9 +4871,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4782,9 +4896,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4802,9 +4918,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4825,9 +4943,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4835,9 +4955,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4845,9 +4967,11 @@ impl BidirectionalIsolate {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4970,9 +5094,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -4980,9 +5106,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5003,9 +5131,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5196,9 +5326,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5288,9 +5420,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5357,9 +5491,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5367,9 +5503,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5390,9 +5528,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5410,9 +5550,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5433,9 +5575,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5443,9 +5587,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5453,9 +5599,11 @@ impl BidirectionalTextOverride {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5604,9 +5752,11 @@ impl BlockQuote {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5614,9 +5764,11 @@ impl BlockQuote {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5637,9 +5789,11 @@ impl BlockQuote {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5856,9 +6010,11 @@ impl BlockQuote {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -5948,9 +6104,11 @@ impl BlockQuote {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6017,9 +6175,11 @@ impl BlockQuote {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6027,9 +6187,11 @@ impl BlockQuote {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6050,9 +6212,11 @@ impl BlockQuote {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6070,9 +6234,11 @@ impl BlockQuote {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6093,9 +6259,11 @@ impl BlockQuote {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6103,9 +6271,11 @@ impl BlockQuote {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6113,9 +6283,11 @@ impl BlockQuote {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6718,9 +6890,11 @@ impl Button {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6741,9 +6915,11 @@ impl Button {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -6960,9 +7136,11 @@ impl Button {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7009,9 +7187,11 @@ impl Button {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7078,9 +7258,11 @@ impl Button {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7101,9 +7283,11 @@ impl Button {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7121,9 +7305,11 @@ impl Button {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7131,9 +7317,11 @@ impl Button {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7141,9 +7329,11 @@ impl Button {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7181,9 +7371,11 @@ impl Canvas {
     #[doc = "Horizontal dimension"]
     #[inline]
     pub fn width(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "width",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7191,9 +7383,11 @@ impl Canvas {
     #[doc = "Vertical dimension"]
     #[inline]
     pub fn height(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "height",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7299,9 +7493,11 @@ impl Canvas {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7309,9 +7505,11 @@ impl Canvas {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7332,9 +7530,11 @@ impl Canvas {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7551,9 +7751,11 @@ impl Canvas {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7643,9 +7845,11 @@ impl Canvas {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7712,9 +7916,11 @@ impl Canvas {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7722,9 +7928,11 @@ impl Canvas {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7745,9 +7953,11 @@ impl Canvas {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7765,9 +7975,11 @@ impl Canvas {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7788,9 +8000,11 @@ impl Canvas {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7798,9 +8012,11 @@ impl Canvas {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -7808,9 +8024,11 @@ impl Canvas {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8221,9 +8439,11 @@ impl Cite {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8231,9 +8451,11 @@ impl Cite {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8254,9 +8476,11 @@ impl Cite {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8447,9 +8671,11 @@ impl Cite {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8539,9 +8765,11 @@ impl Cite {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8608,9 +8836,11 @@ impl Cite {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8618,9 +8848,11 @@ impl Cite {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8641,9 +8873,11 @@ impl Cite {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8661,9 +8895,11 @@ impl Cite {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8684,9 +8920,11 @@ impl Cite {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8694,9 +8932,11 @@ impl Cite {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8704,9 +8944,11 @@ impl Cite {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8829,9 +9071,11 @@ impl Code {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8839,9 +9083,11 @@ impl Code {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -8862,9 +9108,11 @@ impl Code {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9055,9 +9303,11 @@ impl Code {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9147,9 +9397,11 @@ impl Code {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9216,9 +9468,11 @@ impl Code {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9226,9 +9480,11 @@ impl Code {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9249,9 +9505,11 @@ impl Code {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9269,9 +9527,11 @@ impl Code {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9292,9 +9552,11 @@ impl Code {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9302,9 +9564,11 @@ impl Code {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9312,9 +9576,11 @@ impl Code {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9509,9 +9775,11 @@ impl Data {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9519,9 +9787,11 @@ impl Data {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9542,9 +9812,11 @@ impl Data {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9735,9 +10007,11 @@ impl Data {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9827,9 +10101,11 @@ impl Data {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9896,9 +10172,11 @@ impl Data {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9906,9 +10184,11 @@ impl Data {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9929,9 +10209,11 @@ impl Data {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9949,9 +10231,11 @@ impl Data {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9972,9 +10256,11 @@ impl Data {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9982,9 +10268,11 @@ impl Data {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -9992,9 +10280,11 @@ impl Data {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10500,9 +10790,11 @@ impl DeletedText {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10510,9 +10802,11 @@ impl DeletedText {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10533,9 +10827,11 @@ impl DeletedText {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10726,9 +11022,11 @@ impl DeletedText {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10818,9 +11116,11 @@ impl DeletedText {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10887,9 +11187,11 @@ impl DeletedText {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10897,9 +11199,11 @@ impl DeletedText {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10920,9 +11224,11 @@ impl DeletedText {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10940,9 +11246,11 @@ impl DeletedText {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10963,9 +11271,11 @@ impl DeletedText {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10973,9 +11283,11 @@ impl DeletedText {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -10983,9 +11295,11 @@ impl DeletedText {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11482,9 +11796,11 @@ impl Definition {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11492,9 +11808,11 @@ impl Definition {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11515,9 +11833,11 @@ impl Definition {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11734,9 +12054,11 @@ impl Definition {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11826,9 +12148,11 @@ impl Definition {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11895,9 +12219,11 @@ impl Definition {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11905,9 +12231,11 @@ impl Definition {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11928,9 +12256,11 @@ impl Definition {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11948,9 +12278,11 @@ impl Definition {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11971,9 +12303,11 @@ impl Definition {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11981,9 +12315,11 @@ impl Definition {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -11991,9 +12327,11 @@ impl Definition {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12461,9 +12799,11 @@ impl Division {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12471,9 +12811,11 @@ impl Division {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12494,9 +12836,11 @@ impl Division {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12687,9 +13031,11 @@ impl Division {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12779,9 +13125,11 @@ impl Division {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12848,9 +13196,11 @@ impl Division {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12858,9 +13208,11 @@ impl Division {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12881,9 +13233,11 @@ impl Division {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12901,9 +13255,11 @@ impl Division {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12924,9 +13280,11 @@ impl Division {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12934,9 +13292,11 @@ impl Division {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -12944,9 +13304,11 @@ impl Division {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -13608,9 +13970,11 @@ impl DescriptionTerm {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -13644,9 +14008,11 @@ impl DescriptionTerm {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -13756,9 +14122,11 @@ impl Emphasis {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -13766,9 +14134,11 @@ impl Emphasis {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -13789,9 +14159,11 @@ impl Emphasis {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -13982,9 +14354,11 @@ impl Emphasis {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14074,9 +14448,11 @@ impl Emphasis {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14143,9 +14519,11 @@ impl Emphasis {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14153,9 +14531,11 @@ impl Emphasis {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14176,9 +14556,11 @@ impl Emphasis {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14196,9 +14578,11 @@ impl Emphasis {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14219,9 +14603,11 @@ impl Emphasis {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14229,9 +14615,11 @@ impl Emphasis {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -14239,9 +14627,11 @@ impl Emphasis {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15488,9 +15878,11 @@ impl Figure {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15498,9 +15890,11 @@ impl Figure {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15521,9 +15915,11 @@ impl Figure {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15740,9 +16136,11 @@ impl Figure {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15832,9 +16230,11 @@ impl Figure {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15901,9 +16301,11 @@ impl Figure {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15911,9 +16313,11 @@ impl Figure {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15934,9 +16338,11 @@ impl Figure {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15954,9 +16360,11 @@ impl Figure {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15977,9 +16385,11 @@ impl Figure {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15987,9 +16397,11 @@ impl Figure {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -15997,9 +16409,11 @@ impl Figure {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -17099,9 +17513,11 @@ impl Heading1 {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -17145,9 +17561,11 @@ impl Heading1 {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -17466,9 +17884,11 @@ impl Heading2 {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -17512,9 +17932,11 @@ impl Heading2 {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -17833,9 +18255,11 @@ impl Heading3 {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -17879,9 +18303,11 @@ impl Heading3 {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -18200,9 +18626,11 @@ impl Heading4 {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -18246,9 +18674,11 @@ impl Heading4 {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -18567,9 +18997,11 @@ impl Heading5 {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -18613,9 +19045,11 @@ impl Heading5 {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -18934,9 +19368,11 @@ impl Heading6 {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -18980,9 +19416,11 @@ impl Heading6 {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19462,9 +19900,11 @@ impl HeadingGroup {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19472,9 +19912,11 @@ impl HeadingGroup {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19495,9 +19937,11 @@ impl HeadingGroup {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19714,9 +20158,11 @@ impl HeadingGroup {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19806,9 +20252,11 @@ impl HeadingGroup {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19875,9 +20323,11 @@ impl HeadingGroup {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19885,9 +20335,11 @@ impl HeadingGroup {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19908,9 +20360,11 @@ impl HeadingGroup {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19928,9 +20382,11 @@ impl HeadingGroup {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19951,9 +20407,11 @@ impl HeadingGroup {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19961,9 +20419,11 @@ impl HeadingGroup {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -19971,9 +20431,11 @@ impl HeadingGroup {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20333,9 +20795,11 @@ impl ThematicBreak {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20343,9 +20807,11 @@ impl ThematicBreak {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20497,9 +20963,11 @@ impl Italic {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20507,9 +20975,11 @@ impl Italic {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20530,9 +21000,11 @@ impl Italic {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20723,9 +21195,11 @@ impl Italic {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20815,9 +21289,11 @@ impl Italic {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20884,9 +21360,11 @@ impl Italic {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20894,9 +21372,11 @@ impl Italic {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20917,9 +21397,11 @@ impl Italic {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20937,9 +21419,11 @@ impl Italic {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20960,9 +21444,11 @@ impl Italic {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20970,9 +21456,11 @@ impl Italic {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -20980,9 +21468,11 @@ impl Italic {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -21949,9 +22439,11 @@ impl Image {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -21998,9 +22490,11 @@ impl Image {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22077,9 +22571,11 @@ impl Image {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22087,9 +22583,11 @@ impl Image {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22097,9 +22595,11 @@ impl Image {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22107,9 +22607,11 @@ impl Image {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22660,9 +23162,11 @@ impl Input {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22683,9 +23187,11 @@ impl Input {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22902,9 +23408,11 @@ impl Input {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -22974,9 +23482,11 @@ impl Input {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23043,9 +23553,11 @@ impl Input {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23066,9 +23578,11 @@ impl Input {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23086,9 +23600,11 @@ impl Input {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23096,9 +23612,11 @@ impl Input {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23106,9 +23624,11 @@ impl Input {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23116,9 +23636,11 @@ impl Input {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23267,9 +23789,11 @@ impl InsertedText {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23277,9 +23801,11 @@ impl InsertedText {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23300,9 +23826,11 @@ impl InsertedText {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23493,9 +24021,11 @@ impl InsertedText {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23585,9 +24115,11 @@ impl InsertedText {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23654,9 +24186,11 @@ impl InsertedText {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23664,9 +24198,11 @@ impl InsertedText {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23687,9 +24223,11 @@ impl InsertedText {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23707,9 +24245,11 @@ impl InsertedText {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23730,9 +24270,11 @@ impl InsertedText {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23740,9 +24282,11 @@ impl InsertedText {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23750,9 +24294,11 @@ impl InsertedText {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23875,9 +24421,11 @@ impl KeyboardInput {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23885,9 +24433,11 @@ impl KeyboardInput {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -23908,9 +24458,11 @@ impl KeyboardInput {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24101,9 +24653,11 @@ impl KeyboardInput {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24193,9 +24747,11 @@ impl KeyboardInput {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24262,9 +24818,11 @@ impl KeyboardInput {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24272,9 +24830,11 @@ impl KeyboardInput {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24295,9 +24855,11 @@ impl KeyboardInput {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24315,9 +24877,11 @@ impl KeyboardInput {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24338,9 +24902,11 @@ impl KeyboardInput {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24348,9 +24914,11 @@ impl KeyboardInput {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -24358,9 +24926,11 @@ impl KeyboardInput {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25072,9 +25642,11 @@ impl ListItem {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25082,9 +25654,11 @@ impl ListItem {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25105,9 +25679,11 @@ impl ListItem {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25324,9 +25900,11 @@ impl ListItem {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25416,9 +25994,11 @@ impl ListItem {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25485,9 +26065,11 @@ impl ListItem {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25495,9 +26077,11 @@ impl ListItem {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25518,9 +26102,11 @@ impl ListItem {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25538,9 +26124,11 @@ impl ListItem {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25561,9 +26149,11 @@ impl ListItem {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25571,9 +26161,11 @@ impl ListItem {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -25581,9 +26173,11 @@ impl ListItem {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26285,9 +26879,11 @@ impl MarkText {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26295,9 +26891,11 @@ impl MarkText {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26318,9 +26916,11 @@ impl MarkText {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26511,9 +27111,11 @@ impl MarkText {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26603,9 +27205,11 @@ impl MarkText {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26672,9 +27276,11 @@ impl MarkText {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26682,9 +27288,11 @@ impl MarkText {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26705,9 +27313,11 @@ impl MarkText {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26725,9 +27335,11 @@ impl MarkText {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26748,9 +27360,11 @@ impl MarkText {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26758,9 +27372,11 @@ impl MarkText {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -26768,9 +27384,11 @@ impl MarkText {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27282,9 +27900,11 @@ impl Meter {
     #[doc = "Current value of the element"]
     #[inline]
     pub fn value(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "value",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27292,9 +27912,11 @@ impl Meter {
     #[doc = "Lower bound of range"]
     #[inline]
     pub fn min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "min",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27302,9 +27924,11 @@ impl Meter {
     #[doc = "Upper bound of range"]
     #[inline]
     pub fn max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "max",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27312,9 +27936,11 @@ impl Meter {
     #[doc = "High limit of low range"]
     #[inline]
     pub fn low(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "low",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27322,9 +27948,11 @@ impl Meter {
     #[doc = "Low limit of high range"]
     #[inline]
     pub fn high(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "high",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27332,9 +27960,11 @@ impl Meter {
     #[doc = "Optimum value in gauge"]
     #[inline]
     pub fn optimum(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "optimum",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27652,9 +28282,11 @@ impl Meter {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -27662,9 +28294,11 @@ impl Meter {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -29648,9 +30282,11 @@ impl Option {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -29694,9 +30330,11 @@ impl Option {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -29858,9 +30496,11 @@ impl Output {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -29868,9 +30508,11 @@ impl Output {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -29891,9 +30533,11 @@ impl Output {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30110,9 +30754,11 @@ impl Output {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30202,9 +30848,11 @@ impl Output {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30271,9 +30919,11 @@ impl Output {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30281,9 +30931,11 @@ impl Output {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30304,9 +30956,11 @@ impl Output {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30324,9 +30978,11 @@ impl Output {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30347,9 +31003,11 @@ impl Output {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30357,9 +31015,11 @@ impl Output {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30367,9 +31027,11 @@ impl Output {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30492,9 +31154,11 @@ impl Paragraph {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30502,9 +31166,11 @@ impl Paragraph {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30525,9 +31191,11 @@ impl Paragraph {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30718,9 +31386,11 @@ impl Paragraph {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30810,9 +31480,11 @@ impl Paragraph {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30879,9 +31551,11 @@ impl Paragraph {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30889,9 +31563,11 @@ impl Paragraph {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30912,9 +31588,11 @@ impl Paragraph {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30932,9 +31610,11 @@ impl Paragraph {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30955,9 +31635,11 @@ impl Paragraph {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30965,9 +31647,11 @@ impl Paragraph {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -30975,9 +31659,11 @@ impl Paragraph {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31127,9 +31813,11 @@ impl PreformattedText {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31137,9 +31825,11 @@ impl PreformattedText {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31160,9 +31850,11 @@ impl PreformattedText {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31353,9 +32045,11 @@ impl PreformattedText {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31445,9 +32139,11 @@ impl PreformattedText {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31514,9 +32210,11 @@ impl PreformattedText {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31524,9 +32222,11 @@ impl PreformattedText {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31547,9 +32247,11 @@ impl PreformattedText {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31567,9 +32269,11 @@ impl PreformattedText {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31590,9 +32294,11 @@ impl PreformattedText {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31600,9 +32306,11 @@ impl PreformattedText {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31610,9 +32318,11 @@ impl PreformattedText {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31650,9 +32360,11 @@ impl Progress {
     #[doc = "Current value of the element"]
     #[inline]
     pub fn value(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "value",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31660,9 +32372,11 @@ impl Progress {
     #[doc = "Upper bound of range"]
     #[inline]
     pub fn max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "max",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31980,9 +32694,11 @@ impl Progress {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -31990,9 +32706,11 @@ impl Progress {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32000,9 +32718,11 @@ impl Progress {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32138,9 +32858,11 @@ impl Quotation {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32148,9 +32870,11 @@ impl Quotation {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32171,9 +32895,11 @@ impl Quotation {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32364,9 +33090,11 @@ impl Quotation {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32456,9 +33184,11 @@ impl Quotation {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32525,9 +33255,11 @@ impl Quotation {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32535,9 +33267,11 @@ impl Quotation {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32558,9 +33292,11 @@ impl Quotation {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32578,9 +33314,11 @@ impl Quotation {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32601,9 +33339,11 @@ impl Quotation {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32611,9 +33351,11 @@ impl Quotation {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32621,9 +33363,11 @@ impl Quotation {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32746,9 +33490,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32756,9 +33502,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32779,9 +33527,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -32972,9 +33722,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33064,9 +33816,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33133,9 +33887,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33143,9 +33899,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33166,9 +33924,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33186,9 +33946,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33209,9 +33971,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33219,9 +33983,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33229,9 +33995,11 @@ impl RubyFallbackParenthesis {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33354,9 +34122,11 @@ impl RubyText {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33364,9 +34134,11 @@ impl RubyText {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33387,9 +34159,11 @@ impl RubyText {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33580,9 +34354,11 @@ impl RubyText {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33672,9 +34448,11 @@ impl RubyText {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33741,9 +34519,11 @@ impl RubyText {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33751,9 +34531,11 @@ impl RubyText {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33774,9 +34556,11 @@ impl RubyText {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33794,9 +34578,11 @@ impl RubyText {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33817,9 +34603,11 @@ impl RubyText {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33827,9 +34615,11 @@ impl RubyText {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33837,9 +34627,11 @@ impl RubyText {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33975,9 +34767,11 @@ impl RubyAnnotation {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -33985,9 +34779,11 @@ impl RubyAnnotation {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34008,9 +34804,11 @@ impl RubyAnnotation {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34227,9 +35025,11 @@ impl RubyAnnotation {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34319,9 +35119,11 @@ impl RubyAnnotation {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34388,9 +35190,11 @@ impl RubyAnnotation {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34398,9 +35202,11 @@ impl RubyAnnotation {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34421,9 +35227,11 @@ impl RubyAnnotation {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34441,9 +35249,11 @@ impl RubyAnnotation {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34464,9 +35274,11 @@ impl RubyAnnotation {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34474,9 +35286,11 @@ impl RubyAnnotation {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34484,9 +35298,11 @@ impl RubyAnnotation {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34609,9 +35425,11 @@ impl StrikeThrough {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34619,9 +35437,11 @@ impl StrikeThrough {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34642,9 +35462,11 @@ impl StrikeThrough {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34835,9 +35657,11 @@ impl StrikeThrough {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34927,9 +35751,11 @@ impl StrikeThrough {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -34996,9 +35822,11 @@ impl StrikeThrough {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35006,9 +35834,11 @@ impl StrikeThrough {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35029,9 +35859,11 @@ impl StrikeThrough {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35049,9 +35881,11 @@ impl StrikeThrough {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35072,9 +35906,11 @@ impl StrikeThrough {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35082,9 +35918,11 @@ impl StrikeThrough {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35092,9 +35930,11 @@ impl StrikeThrough {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35217,9 +36057,11 @@ impl SampleOutput {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35227,9 +36069,11 @@ impl SampleOutput {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35250,9 +36094,11 @@ impl SampleOutput {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35443,9 +36289,11 @@ impl SampleOutput {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35535,9 +36383,11 @@ impl SampleOutput {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35604,9 +36454,11 @@ impl SampleOutput {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35614,9 +36466,11 @@ impl SampleOutput {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35637,9 +36491,11 @@ impl SampleOutput {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35657,9 +36513,11 @@ impl SampleOutput {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35680,9 +36538,11 @@ impl SampleOutput {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35690,9 +36550,11 @@ impl SampleOutput {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -35700,9 +36562,11 @@ impl SampleOutput {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -36656,9 +37520,11 @@ impl Select {
     #[doc = "Size of the control"]
     #[inline]
     pub fn size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "size",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37187,9 +38053,11 @@ impl SideComment {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37197,9 +38065,11 @@ impl SideComment {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37220,9 +38090,11 @@ impl SideComment {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37413,9 +38285,11 @@ impl SideComment {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37505,9 +38379,11 @@ impl SideComment {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37574,9 +38450,11 @@ impl SideComment {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37584,9 +38462,11 @@ impl SideComment {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37607,9 +38487,11 @@ impl SideComment {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37627,9 +38509,11 @@ impl SideComment {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37650,9 +38534,11 @@ impl SideComment {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37660,9 +38546,11 @@ impl SideComment {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37670,9 +38558,11 @@ impl SideComment {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37774,9 +38664,11 @@ impl MediaSource {
     #[doc = "Horizontal dimension (in picture)"]
     #[inline]
     pub fn width(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "width",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37784,9 +38676,11 @@ impl MediaSource {
     #[doc = "Vertical dimension (in picture)"]
     #[inline]
     pub fn height(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "height",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37896,9 +38790,11 @@ impl Span {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37906,9 +38802,11 @@ impl Span {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -37929,9 +38827,11 @@ impl Span {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38122,9 +39022,11 @@ impl Span {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38214,9 +39116,11 @@ impl Span {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38283,9 +39187,11 @@ impl Span {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38293,9 +39199,11 @@ impl Span {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38316,9 +39224,11 @@ impl Span {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38336,9 +39246,11 @@ impl Span {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38359,9 +39271,11 @@ impl Span {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38369,9 +39283,11 @@ impl Span {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38379,9 +39295,11 @@ impl Span {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38504,9 +39422,11 @@ impl Strong {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38514,9 +39434,11 @@ impl Strong {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38537,9 +39459,11 @@ impl Strong {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38730,9 +39654,11 @@ impl Strong {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38822,9 +39748,11 @@ impl Strong {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38891,9 +39819,11 @@ impl Strong {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38901,9 +39831,11 @@ impl Strong {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38924,9 +39856,11 @@ impl Strong {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38944,9 +39878,11 @@ impl Strong {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38967,9 +39903,11 @@ impl Strong {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38977,9 +39915,11 @@ impl Strong {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -38987,9 +39927,11 @@ impl Strong {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39155,9 +40097,11 @@ impl SubScript {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39165,9 +40109,11 @@ impl SubScript {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39188,9 +40134,11 @@ impl SubScript {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39381,9 +40329,11 @@ impl SubScript {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39473,9 +40423,11 @@ impl SubScript {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39542,9 +40494,11 @@ impl SubScript {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39552,9 +40506,11 @@ impl SubScript {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39575,9 +40531,11 @@ impl SubScript {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39595,9 +40553,11 @@ impl SubScript {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39618,9 +40578,11 @@ impl SubScript {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39628,9 +40590,11 @@ impl SubScript {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39638,9 +40602,11 @@ impl SubScript {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39776,9 +40742,11 @@ impl Summary {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39786,9 +40754,11 @@ impl Summary {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -39809,9 +40779,11 @@ impl Summary {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40028,9 +41000,11 @@ impl Summary {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40120,9 +41094,11 @@ impl Summary {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40189,9 +41165,11 @@ impl Summary {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40199,9 +41177,11 @@ impl Summary {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40222,9 +41202,11 @@ impl Summary {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40242,9 +41224,11 @@ impl Summary {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40265,9 +41249,11 @@ impl Summary {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40275,9 +41261,11 @@ impl Summary {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40285,9 +41273,11 @@ impl Summary {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40410,9 +41400,11 @@ impl SuperScript {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40420,9 +41412,11 @@ impl SuperScript {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40443,9 +41437,11 @@ impl SuperScript {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40636,9 +41632,11 @@ impl SuperScript {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40728,9 +41726,11 @@ impl SuperScript {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40797,9 +41797,11 @@ impl SuperScript {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40807,9 +41809,11 @@ impl SuperScript {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40830,9 +41834,11 @@ impl SuperScript {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40850,9 +41856,11 @@ impl SuperScript {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40873,9 +41881,11 @@ impl SuperScript {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40883,9 +41893,11 @@ impl SuperScript {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -40893,9 +41905,11 @@ impl SuperScript {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41031,9 +42045,11 @@ impl Table {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41041,9 +42057,11 @@ impl Table {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41064,9 +42082,11 @@ impl Table {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41283,9 +42303,11 @@ impl Table {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41375,9 +42397,11 @@ impl Table {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41444,9 +42468,11 @@ impl Table {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41454,9 +42480,11 @@ impl Table {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41477,9 +42505,11 @@ impl Table {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41497,9 +42527,11 @@ impl Table {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41520,9 +42552,11 @@ impl Table {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41530,9 +42564,11 @@ impl Table {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41540,9 +42576,11 @@ impl Table {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41678,9 +42716,11 @@ impl TableBody {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41688,9 +42728,11 @@ impl TableBody {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41711,9 +42753,11 @@ impl TableBody {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -41930,9 +42974,11 @@ impl TableBody {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42022,9 +43068,11 @@ impl TableBody {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42091,9 +43139,11 @@ impl TableBody {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42101,9 +43151,11 @@ impl TableBody {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42124,9 +43176,11 @@ impl TableBody {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42144,9 +43198,11 @@ impl TableBody {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42167,9 +43223,11 @@ impl TableBody {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42177,9 +43235,11 @@ impl TableBody {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42187,9 +43247,11 @@ impl TableBody {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42364,9 +43426,11 @@ impl TableCell {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42374,9 +43438,11 @@ impl TableCell {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42397,9 +43463,11 @@ impl TableCell {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42616,9 +43684,11 @@ impl TableCell {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42708,9 +43778,11 @@ impl TableCell {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42777,9 +43849,11 @@ impl TableCell {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42787,9 +43861,11 @@ impl TableCell {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42810,9 +43886,11 @@ impl TableCell {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42830,9 +43908,11 @@ impl TableCell {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42853,9 +43933,11 @@ impl TableCell {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42863,9 +43945,11 @@ impl TableCell {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42873,9 +43957,11 @@ impl TableCell {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42943,9 +44029,11 @@ impl TextArea {
     #[doc = "Maximum number of characters per line"]
     #[inline]
     pub fn cols(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "cols",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42989,9 +44077,11 @@ impl TextArea {
     #[doc = "Maximum length of value"]
     #[inline]
     pub fn max_length(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "maxlength",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -42999,9 +44089,11 @@ impl TextArea {
     #[doc = "Minimum length of value"]
     #[inline]
     pub fn min_length(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "minlength",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43055,9 +44147,11 @@ impl TextArea {
     #[doc = "Number of lines to show"]
     #[inline]
     pub fn rows(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "rows",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43572,9 +44666,11 @@ impl TableFoot {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43582,9 +44678,11 @@ impl TableFoot {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43605,9 +44703,11 @@ impl TableFoot {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43824,9 +44924,11 @@ impl TableFoot {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43916,9 +45018,11 @@ impl TableFoot {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43985,9 +45089,11 @@ impl TableFoot {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -43995,9 +45101,11 @@ impl TableFoot {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44018,9 +45126,11 @@ impl TableFoot {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44038,9 +45148,11 @@ impl TableFoot {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44061,9 +45173,11 @@ impl TableFoot {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44071,9 +45185,11 @@ impl TableFoot {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44081,9 +45197,11 @@ impl TableFoot {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44284,9 +45402,11 @@ impl TableHeader {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44294,9 +45414,11 @@ impl TableHeader {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44317,9 +45439,11 @@ impl TableHeader {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44536,9 +45660,11 @@ impl TableHeader {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44628,9 +45754,11 @@ impl TableHeader {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44697,9 +45825,11 @@ impl TableHeader {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44707,9 +45837,11 @@ impl TableHeader {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44730,9 +45862,11 @@ impl TableHeader {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44750,9 +45884,11 @@ impl TableHeader {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44773,9 +45909,11 @@ impl TableHeader {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44783,9 +45921,11 @@ impl TableHeader {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44793,9 +45933,11 @@ impl TableHeader {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44931,9 +46073,11 @@ impl TableHead {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44941,9 +46085,11 @@ impl TableHead {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -44964,9 +46110,11 @@ impl TableHead {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45183,9 +46331,11 @@ impl TableHead {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45275,9 +46425,11 @@ impl TableHead {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45344,9 +46496,11 @@ impl TableHead {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45354,9 +46508,11 @@ impl TableHead {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45377,9 +46533,11 @@ impl TableHead {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45397,9 +46555,11 @@ impl TableHead {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45420,9 +46580,11 @@ impl TableHead {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45430,9 +46592,11 @@ impl TableHead {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45440,9 +46604,11 @@ impl TableHead {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45578,9 +46744,11 @@ impl Time {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45588,9 +46756,11 @@ impl Time {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45611,9 +46781,11 @@ impl Time {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45804,9 +46976,11 @@ impl Time {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45896,9 +47070,11 @@ impl Time {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45965,9 +47141,11 @@ impl Time {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45975,9 +47153,11 @@ impl Time {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -45998,9 +47178,11 @@ impl Time {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46018,9 +47200,11 @@ impl Time {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46041,9 +47225,11 @@ impl Time {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46051,9 +47237,11 @@ impl Time {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46061,9 +47249,11 @@ impl Time {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46216,9 +47406,11 @@ impl TableRow {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46226,9 +47418,11 @@ impl TableRow {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46249,9 +47443,11 @@ impl TableRow {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46468,9 +47664,11 @@ impl TableRow {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46560,9 +47758,11 @@ impl TableRow {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46629,9 +47829,11 @@ impl TableRow {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46639,9 +47841,11 @@ impl TableRow {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46662,9 +47866,11 @@ impl TableRow {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46682,9 +47888,11 @@ impl TableRow {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46705,9 +47913,11 @@ impl TableRow {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46715,9 +47925,11 @@ impl TableRow {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46725,9 +47937,11 @@ impl TableRow {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46928,9 +48142,11 @@ impl Underline {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46938,9 +48154,11 @@ impl Underline {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -46961,9 +48179,11 @@ impl Underline {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47154,9 +48374,11 @@ impl Underline {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47246,9 +48468,11 @@ impl Underline {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47315,9 +48539,11 @@ impl Underline {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47325,9 +48551,11 @@ impl Underline {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47348,9 +48576,11 @@ impl Underline {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47368,9 +48598,11 @@ impl Underline {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47391,9 +48623,11 @@ impl Underline {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47401,9 +48635,11 @@ impl Underline {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47411,9 +48647,11 @@ impl Underline {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47929,9 +49167,11 @@ impl Variable {
     #[doc = "Defines the total number of columns in a table, grid, or treegrid. See related aria-colindex."]
     #[inline]
     pub fn aria_col_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47939,9 +49179,11 @@ impl Variable {
     #[doc = "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. See related aria-colindextext, aria-colcount, and aria-colspan."]
     #[inline]
     pub fn aria_col_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -47962,9 +49204,11 @@ impl Variable {
     #[doc = "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-colindex and aria-rowspan."]
     #[inline]
     pub fn aria_col_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-colspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48155,9 +49399,11 @@ impl Variable {
     #[doc = "Defines the hierarchical level of an element within a structure."]
     #[inline]
     pub fn aria_level(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-level",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48247,9 +49493,11 @@ impl Variable {
     #[doc = "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-setsize."]
     #[inline]
     pub fn aria_pos_in_set(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-posinset",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48316,9 +49564,11 @@ impl Variable {
     #[doc = "Defines the total number of rows in a table, grid, or treegrid. See related aria-rowindex."]
     #[inline]
     pub fn aria_row_count(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowcount",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48326,9 +49576,11 @@ impl Variable {
     #[doc = "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. See related aria-rowindextext, aria-rowcount, and aria-rowspan."]
     #[inline]
     pub fn aria_row_index(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowindex",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48349,9 +49601,11 @@ impl Variable {
     #[doc = "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. See related aria-rowindex and aria-colspan."]
     #[inline]
     pub fn aria_row_span(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-rowspan",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48369,9 +49623,11 @@ impl Variable {
     #[doc = "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM. See related aria-posinset."]
     #[inline]
     pub fn aria_set_size(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-setsize",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48392,9 +49648,11 @@ impl Variable {
     #[doc = "Defines the maximum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_max(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemax",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48402,9 +49660,11 @@ impl Variable {
     #[doc = "Defines the minimum allowed value for a range widget."]
     #[inline]
     pub fn aria_value_min(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuemin",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48412,9 +49672,11 @@ impl Variable {
     #[doc = "Defines the current value for a range widget. See related aria-valuetext."]
     #[inline]
     pub fn aria_value_now(mut self: Box<Self>, value: f64) -> Box<Self> {
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "aria-valuenow",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48566,9 +49828,11 @@ impl Video {
     #[doc = "Horizontal dimension"]
     #[inline]
     pub fn width(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "width",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }
@@ -48576,9 +49840,11 @@ impl Video {
     #[doc = "Vertical dimension"]
     #[inline]
     pub fn height(mut self: Box<Self>, value: i64) -> Box<Self> {
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "height",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }

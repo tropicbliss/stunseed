@@ -23,12 +23,16 @@ pub trait HtmlElement: Clone {
 
     #[inline]
     fn add_custom_integer_attribute(self: Box<Self>, key: &'static str, value: i64) -> Box<Self> {
-        self.add_custom_attribute(key, value.to_string())
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
+        self.add_custom_attribute(key, value)
     }
 
     #[inline]
     fn add_custom_float_attribute(self: Box<Self>, key: &'static str, value: f64) -> Box<Self> {
-        self.add_custom_attribute(key, value.to_string())
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
+        self.add_custom_attribute(key, value)
     }
 
     #[inline]

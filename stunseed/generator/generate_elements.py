@@ -10,9 +10,11 @@ def build_int_attribute(function_name, doc, canonical):
 #[doc = "{doc}"]
     #[inline]
     pub fn {function_name}(mut self: Box<Self>, value: i64) -> Box<Self> {{
+        let mut buffer = itoa::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "{canonical}",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }}
@@ -41,9 +43,11 @@ def build_float_attribute(function_name, doc, canonical):
 #[doc = "{doc}"]
     #[inline]
     pub fn {function_name}(mut self: Box<Self>, value: f64) -> Box<Self> {{
+        let mut buffer = ryu::Buffer::new();
+        let value = buffer.format(value).to_string();
         self.inner.insert_attribute(
             "{canonical}",
-            crate::ast::AttributeValue::KeyValuePair(value.to_string().into()),
+            crate::ast::AttributeValue::KeyValuePair(value.into()),
         );
         self
     }}
