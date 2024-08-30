@@ -1,10 +1,9 @@
-use std::borrow::Cow;
-
 use crate::{
     ast::{AttributeValue, DomElement, DomNode},
     utils,
 };
 use dyn_clone::DynClone;
+use std::borrow::Cow;
 
 pub trait HtmlElement: Clone {
     fn get_dom_element_mut(&mut self) -> &mut DomElement;
