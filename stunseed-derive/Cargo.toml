@@ -1,7 +1,13 @@
 [package]
 name = "stunseed-derive"
 version = "0.1.0"
+authors = ["tropicbliss <tropicbliss@protonmail.com>"]
+categories = []
+description = "Proc macros for stunseed"
 edition = "2021"
+keywords = ["html"]
+license = "MIT"
+repository = "https://github.com/tropicbliss/stunseed"
 
 [dependencies]
 proc-macro2 = "1.0"
