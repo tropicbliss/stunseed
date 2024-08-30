@@ -1,6 +1,5 @@
-use std::{borrow::Cow, collections::HashMap};
-
 use crate::utils::is_valid_html_attribute_key;
+use std::{borrow::Cow, collections::HashMap};
 
 #[derive(Clone)]
 pub enum DomNode {
