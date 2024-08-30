@@ -8,6 +8,7 @@ edition = "2021"
 keywords = ["html"]
 license = "MIT"
 repository = "https://github.com/tropicbliss/stunseed"
+rust-version = "1.70"
 
 [dependencies]
 ammonia = "4.0"
