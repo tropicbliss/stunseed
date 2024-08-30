@@ -5,7 +5,7 @@ pub struct Anchor {
 
 /// The HTML `<a>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 pub fn a() -> Box<Anchor> {
     Box::new(Anchor {
         inner: crate::ast::DomElement::new("a"),
@@ -782,7 +782,7 @@ pub struct Abbreviation {
 
 /// The HTML `<abbr>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)
 pub fn abbr() -> Box<Abbreviation> {
     Box::new(Abbreviation {
         inner: crate::ast::DomElement::new("abbr"),
@@ -1416,7 +1416,7 @@ pub struct Address {
 
 /// The HTML `<address>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address)
 pub fn address() -> Box<Address> {
     Box::new(Address {
         inner: crate::ast::DomElement::new("address"),
@@ -2089,7 +2089,7 @@ pub struct ImageMapArea {
 
 /// The HTML `<area>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area)
 pub fn area() -> Box<ImageMapArea> {
     Box::new(ImageMapArea {
         inner: crate::ast::DomElement::new_void("area"),
@@ -2557,7 +2557,7 @@ pub struct Article {
 
 /// The HTML `<article>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
 pub fn article() -> Box<Article> {
     Box::new(Article {
         inner: crate::ast::DomElement::new("article"),
@@ -2933,7 +2933,7 @@ pub struct Aside {
 
 /// The HTML `<aside>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)
 pub fn aside() -> Box<Aside> {
     Box::new(Aside {
         inner: crate::ast::DomElement::new("aside"),
@@ -3262,7 +3262,7 @@ pub struct Audio {
 
 /// The HTML `<audio>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 pub fn audio() -> Box<Audio> {
     Box::new(Audio {
         inner: crate::ast::DomElement::new("audio"),
@@ -3705,7 +3705,7 @@ pub struct Bold {
 
 /// The HTML `<b>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b)
 pub fn b() -> Box<Bold> {
     Box::new(Bold {
         inner: crate::ast::DomElement::new("b"),
@@ -4339,7 +4339,7 @@ pub struct Base {
 
 /// The HTML `<base>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base)
 pub fn base() -> Box<Base> {
     Box::new(Base {
         inner: crate::ast::DomElement::new_void("base"),
@@ -4383,7 +4383,7 @@ pub struct BidirectionalIsolate {
 
 /// The HTML `<bdi>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi)
 pub fn bdi() -> Box<BidirectionalIsolate> {
     Box::new(BidirectionalIsolate {
         inner: crate::ast::DomElement::new("bdi"),
@@ -5017,7 +5017,7 @@ pub struct BidirectionalTextOverride {
 
 /// The HTML `<bdo>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo)
 pub fn bdo() -> Box<BidirectionalTextOverride> {
     Box::new(BidirectionalTextOverride {
         inner: crate::ast::DomElement::new("bdo"),
@@ -5651,7 +5651,7 @@ pub struct BlockQuote {
 
 /// The HTML `<blockquote>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)
 pub fn blockquote() -> Box<BlockQuote> {
     Box::new(BlockQuote {
         inner: crate::ast::DomElement::new("blockquote"),
@@ -6337,7 +6337,7 @@ pub struct Body {
 
 /// The HTML `<body>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
 pub fn body() -> Box<Body> {
     Box::new(Body {
         inner: crate::ast::DomElement::new("body"),
@@ -6617,7 +6617,7 @@ pub struct LineBreak {
 
 /// The HTML `<br>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
 pub fn br() -> Box<LineBreak> {
     Box::new(LineBreak {
         inner: crate::ast::DomElement::new_void("br"),
@@ -6658,7 +6658,7 @@ pub struct Button {
 
 /// The HTML `<button>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 pub fn button() -> Box<Button> {
     Box::new(Button {
         inner: crate::ast::DomElement::new("button"),
@@ -7389,7 +7389,7 @@ pub struct Canvas {
 
 /// The HTML `<canvas>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)
 pub fn canvas() -> Box<Canvas> {
     Box::new(Canvas {
         inner: crate::ast::DomElement::new("canvas"),
@@ -8086,7 +8086,7 @@ pub struct Caption {
 
 /// The HTML `<caption>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
 pub fn caption() -> Box<Caption> {
     Box::new(Caption {
         inner: crate::ast::DomElement::new("caption"),
@@ -8376,7 +8376,7 @@ pub struct Cite {
 
 /// The HTML `<cite>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite)
 pub fn cite() -> Box<Cite> {
     Box::new(Cite {
         inner: crate::ast::DomElement::new("cite"),
@@ -9010,7 +9010,7 @@ pub struct Code {
 
 /// The HTML `<code>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
 pub fn code() -> Box<Code> {
     Box::new(Code {
         inner: crate::ast::DomElement::new("code"),
@@ -9644,7 +9644,7 @@ pub struct TableColumn {
 
 /// The HTML `<col>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)
 pub fn col() -> Box<TableColumn> {
     Box::new(TableColumn {
         inner: crate::ast::DomElement::new_void("col"),
@@ -9675,7 +9675,7 @@ pub struct TableColumnGroup {
 
 /// The HTML `<colgroup>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup)
 pub fn colgroup() -> Box<TableColumnGroup> {
     Box::new(TableColumnGroup {
         inner: crate::ast::DomElement::new("colgroup"),
@@ -9707,7 +9707,7 @@ pub struct Data {
 
 /// The HTML `<data>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data)
 pub fn data() -> Box<Data> {
     Box::new(Data {
         inner: crate::ast::DomElement::new("data"),
@@ -10354,7 +10354,7 @@ pub struct DataList {
 
 /// The HTML `<datalist>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
 pub fn datalist() -> Box<DataList> {
     Box::new(DataList {
         inner: crate::ast::DomElement::new("datalist"),
@@ -10386,7 +10386,7 @@ pub struct DescriptionDetails {
 
 /// The HTML `<dd>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd)
 pub fn dd() -> Box<DescriptionDetails> {
     Box::new(DescriptionDetails {
         inner: crate::ast::DomElement::new("dd"),
@@ -10715,7 +10715,7 @@ pub struct DeletedText {
 
 /// The HTML `<del>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
 pub fn del() -> Box<DeletedText> {
     Box::new(DeletedText {
         inner: crate::ast::DomElement::new("del"),
@@ -11375,7 +11375,7 @@ pub struct Details {
 
 /// The HTML `<details>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
 pub fn details() -> Box<Details> {
     Box::new(Details {
         inner: crate::ast::DomElement::new("details"),
@@ -11738,7 +11738,7 @@ pub struct Definition {
 
 /// The HTML `<dfn>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn)
 pub fn dfn() -> Box<Definition> {
     Box::new(Definition {
         inner: crate::ast::DomElement::new("dfn"),
@@ -12411,7 +12411,7 @@ pub struct Dialog {
 
 /// The HTML `<dialog>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 pub fn dialog() -> Box<Dialog> {
     Box::new(Dialog {
         inner: crate::ast::DomElement::new("dialog"),
@@ -12758,7 +12758,7 @@ pub struct Division {
 
 /// The HTML `<div>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
 pub fn div() -> Box<Division> {
     Box::new(Division {
         inner: crate::ast::DomElement::new("div"),
@@ -13392,7 +13392,7 @@ pub struct DescriptionList {
 
 /// The HTML `<dl>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
 pub fn dl() -> Box<DescriptionList> {
     Box::new(DescriptionList {
         inner: crate::ast::DomElement::new("dl"),
@@ -13734,7 +13734,7 @@ pub struct DescriptionTerm {
 
 /// The HTML `<dt>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt)
 pub fn dt() -> Box<DescriptionTerm> {
     Box::new(DescriptionTerm {
         inner: crate::ast::DomElement::new("dt"),
@@ -14087,7 +14087,7 @@ pub struct Emphasis {
 
 /// The HTML `<em>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
 pub fn em() -> Box<Emphasis> {
     Box::new(Emphasis {
         inner: crate::ast::DomElement::new("em"),
@@ -14721,7 +14721,7 @@ pub struct Embed {
 
 /// The HTML `<embed>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)
 pub fn embed() -> Box<Embed> {
     Box::new(Embed {
         inner: crate::ast::DomElement::new_void("embed"),
@@ -15124,7 +15124,7 @@ pub struct Fieldset {
 
 /// The HTML `<fieldset>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
 pub fn fieldset() -> Box<Fieldset> {
     Box::new(Fieldset {
         inner: crate::ast::DomElement::new("fieldset"),
@@ -15535,7 +15535,7 @@ pub struct FigureCaption {
 
 /// The HTML `<figcaption>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption)
 pub fn figcaption() -> Box<FigureCaption> {
     Box::new(FigureCaption {
         inner: crate::ast::DomElement::new("figcaption"),
@@ -15838,7 +15838,7 @@ pub struct Figure {
 
 /// The HTML `<figure>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 pub fn figure() -> Box<Figure> {
     Box::new(Figure {
         inner: crate::ast::DomElement::new("figure"),
@@ -16511,7 +16511,7 @@ pub struct Footer {
 
 /// The HTML `<footer>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
 pub fn footer() -> Box<Footer> {
     Box::new(Footer {
         inner: crate::ast::DomElement::new("footer"),
@@ -16853,7 +16853,7 @@ pub struct Form {
 
 /// The HTML `<form>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 pub fn form() -> Box<Form> {
     Box::new(Form {
         inner: crate::ast::DomElement::new("form"),
@@ -17283,7 +17283,7 @@ pub struct Heading1 {
 
 /// The HTML `<h1>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1)
 pub fn h1() -> Box<Heading1> {
     Box::new(Heading1 {
         inner: crate::ast::DomElement::new("h1"),
@@ -17656,7 +17656,7 @@ pub struct Heading2 {
 
 /// The HTML `<h2>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h2
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h2)
 pub fn h2() -> Box<Heading2> {
     Box::new(Heading2 {
         inner: crate::ast::DomElement::new("h2"),
@@ -18029,7 +18029,7 @@ pub struct Heading3 {
 
 /// The HTML `<h3>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h3
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h3)
 pub fn h3() -> Box<Heading3> {
     Box::new(Heading3 {
         inner: crate::ast::DomElement::new("h3"),
@@ -18402,7 +18402,7 @@ pub struct Heading4 {
 
 /// The HTML `<h4>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h4
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h4)
 pub fn h4() -> Box<Heading4> {
     Box::new(Heading4 {
         inner: crate::ast::DomElement::new("h4"),
@@ -18775,7 +18775,7 @@ pub struct Heading5 {
 
 /// The HTML `<h5>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h5
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h5)
 pub fn h5() -> Box<Heading5> {
     Box::new(Heading5 {
         inner: crate::ast::DomElement::new("h5"),
@@ -19148,7 +19148,7 @@ pub struct Heading6 {
 
 /// The HTML `<h6>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h6
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h6)
 pub fn h6() -> Box<Heading6> {
     Box::new(Heading6 {
         inner: crate::ast::DomElement::new("h6"),
@@ -19521,7 +19521,7 @@ pub struct Head {
 
 /// The HTML `<head>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)
 pub fn head() -> Box<Head> {
     Box::new(Head {
         inner: crate::ast::DomElement::new("head"),
@@ -19540,7 +19540,7 @@ pub struct Header {
 
 /// The HTML `<header>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
 pub fn header() -> Box<Header> {
     Box::new(Header {
         inner: crate::ast::DomElement::new("header"),
@@ -19882,7 +19882,7 @@ pub struct HeadingGroup {
 
 /// The HTML `<hgroup>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup)
 pub fn hgroup() -> Box<HeadingGroup> {
     Box::new(HeadingGroup {
         inner: crate::ast::DomElement::new("hgroup"),
@@ -20555,7 +20555,7 @@ pub struct ThematicBreak {
 
 /// The HTML `<hr>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr)
 pub fn hr() -> Box<ThematicBreak> {
     Box::new(ThematicBreak {
         inner: crate::ast::DomElement::new_void("hr"),
@@ -20933,7 +20933,7 @@ pub struct Html {
 
 /// The HTML `<html>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html)
 pub fn html() -> Box<Html> {
     Box::new(Html {
         inner: crate::ast::DomElement::new("html"),
@@ -20964,7 +20964,7 @@ pub struct Italic {
 
 /// The HTML `<i>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i)
 pub fn i() -> Box<Italic> {
     Box::new(Italic {
         inner: crate::ast::DomElement::new("i"),
@@ -21598,7 +21598,7 @@ pub struct Iframe {
 
 /// The HTML `<iframe>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
 pub fn iframe() -> Box<Iframe> {
     Box::new(Iframe {
         inner: crate::ast::DomElement::new("iframe"),
@@ -22080,7 +22080,7 @@ pub struct Image {
 
 /// The HTML `<img>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
 pub fn img() -> Box<Image> {
     Box::new(Image {
         inner: crate::ast::DomElement::new_void("img"),
@@ -22741,7 +22741,7 @@ pub struct Input {
 
 /// The HTML `<input>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 pub fn input() -> Box<Input> {
     Box::new(Input {
         inner: crate::ast::DomElement::new_void("input"),
@@ -23772,7 +23772,7 @@ pub struct InsertedText {
 
 /// The HTML `<ins>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins)
 pub fn ins() -> Box<InsertedText> {
     Box::new(InsertedText {
         inner: crate::ast::DomElement::new("ins"),
@@ -24432,7 +24432,7 @@ pub struct KeyboardInput {
 
 /// The HTML `<kbd>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd)
 pub fn kbd() -> Box<KeyboardInput> {
     Box::new(KeyboardInput {
         inner: crate::ast::DomElement::new("kbd"),
@@ -25066,7 +25066,7 @@ pub struct Label {
 
 /// The HTML `<label>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
 pub fn label() -> Box<Label> {
     Box::new(Label {
         inner: crate::ast::DomElement::new("label"),
@@ -25356,7 +25356,7 @@ pub struct Legend {
 
 /// The HTML `<legend>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend)
 pub fn legend() -> Box<Legend> {
     Box::new(Legend {
         inner: crate::ast::DomElement::new("legend"),
@@ -25633,7 +25633,7 @@ pub struct ListItem {
 
 /// The HTML `<li>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
 pub fn li() -> Box<ListItem> {
     Box::new(ListItem {
         inner: crate::ast::DomElement::new("li"),
@@ -26319,7 +26319,7 @@ pub struct Link {
 
 /// The HTML `<link>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
 pub fn link() -> Box<Link> {
     Box::new(Link {
         inner: crate::ast::DomElement::new_void("link"),
@@ -26543,7 +26543,7 @@ pub struct Main {
 
 /// The HTML `<main>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)
 pub fn main() -> Box<Main> {
     Box::new(Main {
         inner: crate::ast::DomElement::new("main"),
@@ -26872,7 +26872,7 @@ pub struct ImageMap {
 
 /// The HTML `<map>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map)
 pub fn map() -> Box<ImageMap> {
     Box::new(ImageMap {
         inner: crate::ast::DomElement::new("map"),
@@ -26904,7 +26904,7 @@ pub struct MarkText {
 
 /// The HTML `<mark>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark)
 pub fn mark() -> Box<MarkText> {
     Box::new(MarkText {
         inner: crate::ast::DomElement::new("mark"),
@@ -27538,7 +27538,7 @@ pub struct Menu {
 
 /// The HTML `<menu>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu)
 pub fn menu() -> Box<Menu> {
     Box::new(Menu {
         inner: crate::ast::DomElement::new("menu"),
@@ -27933,7 +27933,7 @@ pub struct Meta {
 
 /// The HTML `<meta>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
 pub fn meta() -> Box<Meta> {
     Box::new(Meta {
         inner: crate::ast::DomElement::new_void("meta"),
@@ -28016,7 +28016,7 @@ pub struct Meter {
 
 /// The HTML `<meter>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter)
 pub fn meter() -> Box<Meter> {
     Box::new(Meter {
         inner: crate::ast::DomElement::new("meter"),
@@ -28454,7 +28454,7 @@ pub struct Navigation {
 
 /// The HTML `<nav>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
 pub fn nav() -> Box<Navigation> {
     Box::new(Navigation {
         inner: crate::ast::DomElement::new("nav"),
@@ -28819,7 +28819,7 @@ pub struct NoScript {
 
 /// The HTML `<noscript>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)
 pub fn noscript() -> Box<NoScript> {
     Box::new(NoScript {
         inner: crate::ast::DomElement::new("noscript"),
@@ -28838,7 +28838,7 @@ pub struct Object {
 
 /// The HTML `<object>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)
 pub fn object() -> Box<Object> {
     Box::new(Object {
         inner: crate::ast::DomElement::new("object"),
@@ -29268,7 +29268,7 @@ pub struct OrderedList {
 
 /// The HTML `<ol>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
 pub fn ol() -> Box<OrderedList> {
     Box::new(OrderedList {
         inner: crate::ast::DomElement::new("ol"),
@@ -29702,7 +29702,7 @@ pub struct OptionGroup {
 
 /// The HTML `<optgroup>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup)
 pub fn optgroup() -> Box<OptionGroup> {
     Box::new(OptionGroup {
         inner: crate::ast::DomElement::new("optgroup"),
@@ -30067,7 +30067,7 @@ pub struct Option {
 
 /// The HTML `<option>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
 pub fn option() -> Box<Option> {
     Box::new(Option {
         inner: crate::ast::DomElement::new("option"),
@@ -30489,7 +30489,7 @@ pub struct Output {
 
 /// The HTML `<output>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output)
 pub fn output() -> Box<Output> {
     Box::new(Output {
         inner: crate::ast::DomElement::new("output"),
@@ -31201,7 +31201,7 @@ pub struct Paragraph {
 
 /// The HTML `<p>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 pub fn p() -> Box<Paragraph> {
     Box::new(Paragraph {
         inner: crate::ast::DomElement::new("p"),
@@ -31835,7 +31835,7 @@ pub struct Picture {
 
 /// The HTML `<picture>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
 pub fn picture() -> Box<Picture> {
     Box::new(Picture {
         inner: crate::ast::DomElement::new("picture"),
@@ -31864,7 +31864,7 @@ pub struct PreformattedText {
 
 /// The HTML `<pre>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 pub fn pre() -> Box<PreformattedText> {
     Box::new(PreformattedText {
         inner: crate::ast::DomElement::new("pre"),
@@ -32498,7 +32498,7 @@ pub struct Progress {
 
 /// The HTML `<progress>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)
 pub fn progress() -> Box<Progress> {
     Box::new(Progress {
         inner: crate::ast::DomElement::new("progress"),
@@ -32900,7 +32900,7 @@ pub struct Quotation {
 
 /// The HTML `<q>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q)
 pub fn q() -> Box<Quotation> {
     Box::new(Quotation {
         inner: crate::ast::DomElement::new("q"),
@@ -33547,7 +33547,7 @@ pub struct RubyFallbackParenthesis {
 
 /// The HTML `<rp>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp)
 pub fn rp() -> Box<RubyFallbackParenthesis> {
     Box::new(RubyFallbackParenthesis {
         inner: crate::ast::DomElement::new("rp"),
@@ -34181,7 +34181,7 @@ pub struct RubyText {
 
 /// The HTML `<rt>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt)
 pub fn rt() -> Box<RubyText> {
     Box::new(RubyText {
         inner: crate::ast::DomElement::new("rt"),
@@ -34815,7 +34815,7 @@ pub struct RubyAnnotation {
 
 /// The HTML `<ruby>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby)
 pub fn ruby() -> Box<RubyAnnotation> {
     Box::new(RubyAnnotation {
         inner: crate::ast::DomElement::new("ruby"),
@@ -35488,7 +35488,7 @@ pub struct StrikeThrough {
 
 /// The HTML `<s>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s)
 pub fn s() -> Box<StrikeThrough> {
     Box::new(StrikeThrough {
         inner: crate::ast::DomElement::new("s"),
@@ -36122,7 +36122,7 @@ pub struct SampleOutput {
 
 /// The HTML `<samp>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp)
 pub fn samp() -> Box<SampleOutput> {
     Box::new(SampleOutput {
         inner: crate::ast::DomElement::new("samp"),
@@ -36756,7 +36756,7 @@ pub struct Script {
 
 /// The HTML `<script>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 pub fn script() -> Box<Script> {
     Box::new(Script {
         inner: crate::ast::DomElement::new("script"),
@@ -36905,7 +36905,7 @@ pub struct Search {
 
 /// The HTML `<search>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/search
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/search)
 pub fn search() -> Box<Search> {
     Box::new(Search {
         inner: crate::ast::DomElement::new("search"),
@@ -37247,7 +37247,7 @@ pub struct Section {
 
 /// The HTML `<section>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
 pub fn section() -> Box<Section> {
     Box::new(Section {
         inner: crate::ast::DomElement::new("section"),
@@ -37609,7 +37609,7 @@ pub struct Select {
 
 /// The HTML `<select>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
 pub fn select() -> Box<Select> {
     Box::new(Select {
         inner: crate::ast::DomElement::new("select"),
@@ -38098,7 +38098,7 @@ pub struct Slot {
 
 /// The HTML `<slot>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot)
 pub fn slot() -> Box<Slot> {
     Box::new(Slot {
         inner: crate::ast::DomElement::new("slot"),
@@ -38130,7 +38130,7 @@ pub struct SideComment {
 
 /// The HTML `<small>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small)
 pub fn small() -> Box<SideComment> {
     Box::new(SideComment {
         inner: crate::ast::DomElement::new("small"),
@@ -38764,7 +38764,7 @@ pub struct MediaSource {
 
 /// The HTML `<source>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
 pub fn source() -> Box<MediaSource> {
     Box::new(MediaSource {
         inner: crate::ast::DomElement::new_void("source"),
@@ -38871,7 +38871,7 @@ pub struct Span {
 
 /// The HTML `<span>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
 pub fn span() -> Box<Span> {
     Box::new(Span {
         inner: crate::ast::DomElement::new("span"),
@@ -39505,7 +39505,7 @@ pub struct Strong {
 
 /// The HTML `<strong>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
 pub fn strong() -> Box<Strong> {
     Box::new(Strong {
         inner: crate::ast::DomElement::new("strong"),
@@ -40139,7 +40139,7 @@ pub struct Style {
 
 /// The HTML `<style>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
 pub fn style() -> Box<Style> {
     Box::new(Style {
         inner: crate::ast::DomElement::new("style"),
@@ -40184,7 +40184,7 @@ pub struct SubScript {
 
 /// The HTML `<sub>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub)
 pub fn sub() -> Box<SubScript> {
     Box::new(SubScript {
         inner: crate::ast::DomElement::new("sub"),
@@ -40818,7 +40818,7 @@ pub struct Summary {
 
 /// The HTML `<summary>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)
 pub fn summary() -> Box<Summary> {
     Box::new(Summary {
         inner: crate::ast::DomElement::new("summary"),
@@ -41491,7 +41491,7 @@ pub struct SuperScript {
 
 /// The HTML `<sup>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup)
 pub fn sup() -> Box<SuperScript> {
     Box::new(SuperScript {
         inner: crate::ast::DomElement::new("sup"),
@@ -42125,7 +42125,7 @@ pub struct Table {
 
 /// The HTML `<table>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 pub fn table() -> Box<Table> {
     Box::new(Table {
         inner: crate::ast::DomElement::new("table"),
@@ -42798,7 +42798,7 @@ pub struct TableBody {
 
 /// The HTML `<tbody>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody)
 pub fn tbody() -> Box<TableBody> {
     Box::new(TableBody {
         inner: crate::ast::DomElement::new("tbody"),
@@ -43471,7 +43471,7 @@ pub struct TableCell {
 
 /// The HTML `<td>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td)
 pub fn td() -> Box<TableCell> {
     Box::new(TableCell {
         inner: crate::ast::DomElement::new("td"),
@@ -44183,7 +44183,7 @@ pub struct Template {
 
 /// The HTML `<template>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
 pub fn template() -> Box<Template> {
     Box::new(Template {
         inner: crate::ast::DomElement::new("template"),
@@ -44202,7 +44202,7 @@ pub struct TextArea {
 
 /// The HTML `<textarea>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 pub fn textarea() -> Box<TextArea> {
     Box::new(TextArea {
         inner: crate::ast::DomElement::new("textarea"),
@@ -44756,7 +44756,7 @@ pub struct TableFoot {
 
 /// The HTML `<tfoot>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot)
 pub fn tfoot() -> Box<TableFoot> {
     Box::new(TableFoot {
         inner: crate::ast::DomElement::new("tfoot"),
@@ -45429,7 +45429,7 @@ pub struct TableHeader {
 
 /// The HTML `<th>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th)
 pub fn th() -> Box<TableHeader> {
     Box::new(TableHeader {
         inner: crate::ast::DomElement::new("th"),
@@ -46167,7 +46167,7 @@ pub struct TableHead {
 
 /// The HTML `<thead>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead)
 pub fn thead() -> Box<TableHead> {
     Box::new(TableHead {
         inner: crate::ast::DomElement::new("thead"),
@@ -46840,7 +46840,7 @@ pub struct Time {
 
 /// The HTML `<time>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
 pub fn time() -> Box<Time> {
     Box::new(Time {
         inner: crate::ast::DomElement::new("time"),
@@ -47487,7 +47487,7 @@ pub struct Title {
 
 /// The HTML `<title>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
 pub fn title() -> Box<Title> {
     Box::new(Title {
         inner: crate::ast::DomElement::new("title"),
@@ -47506,7 +47506,7 @@ pub struct TableRow {
 
 /// The HTML `<tr>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr)
 pub fn tr() -> Box<TableRow> {
     Box::new(TableRow {
         inner: crate::ast::DomElement::new("tr"),
@@ -48179,7 +48179,7 @@ pub struct TextTrack {
 
 /// The HTML `<track>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
 pub fn track() -> Box<TextTrack> {
     Box::new(TextTrack {
         inner: crate::ast::DomElement::new_void("track"),
@@ -48259,7 +48259,7 @@ pub struct Underline {
 
 /// The HTML `<u>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u)
 pub fn u() -> Box<Underline> {
     Box::new(Underline {
         inner: crate::ast::DomElement::new("u"),
@@ -48893,7 +48893,7 @@ pub struct UnorderedList {
 
 /// The HTML `<ul>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
 pub fn ul() -> Box<UnorderedList> {
     Box::new(UnorderedList {
         inner: crate::ast::DomElement::new("ul"),
@@ -49288,7 +49288,7 @@ pub struct Variable {
 
 /// The HTML `<var>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var)
 pub fn var() -> Box<Variable> {
     Box::new(Variable {
         inner: crate::ast::DomElement::new("var"),
@@ -49922,7 +49922,7 @@ pub struct Video {
 
 /// The HTML `<video>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
 pub fn video() -> Box<Video> {
     Box::new(Video {
         inner: crate::ast::DomElement::new("video"),
@@ -50412,7 +50412,7 @@ pub struct LineBreakOpportunity {
 
 /// The HTML `<wbr>` element
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
 pub fn wbr() -> Box<LineBreakOpportunity> {
     Box::new(LineBreakOpportunity {
         inner: crate::ast::DomElement::new_void("wbr"),

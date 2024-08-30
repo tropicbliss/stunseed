@@ -70,7 +70,7 @@ pub struct {struct_name} {{
 
 /// The HTML `<{element_name}>` element
 ///
-/// {url_link}
+/// [MDN Documentation]({url_link})
 pub fn {element_name}() -> Box<{struct_name}> {{
     Box::new({struct_name} {{
         inner: crate::ast::DomElement::{"new_void" if is_void else "new"}("{element_name}"),
