@@ -3,7 +3,6 @@ use crate::{
     utils,
 };
 use dyn_clone::DynClone;
-use std::borrow::Cow;
 
 pub trait HtmlElement: Clone {
     fn get_dom_element_mut(&mut self) -> &mut DomElement;
@@ -13,19 +12,15 @@ pub trait HtmlElement: Clone {
     #[inline]
     fn add_custom_attribute<T>(mut self: Box<Self>, key: &'static str, value: T) -> Box<Self>
     where
-        T: Into<Cow<'static, str>>,
+        T: ToString,
     {
         self.get_dom_element_mut()
-            .insert_attribute(key, AttributeValue::KeyValuePair(value.into()));
+            .insert_attribute(key, AttributeValue::KeyValuePair(value.to_string().into()));
         self
     }
 
     #[inline]
-    fn add_custom_boolean_attribute(
-        mut self: Box<Self>,
-        key: &'static str,
-        value: bool,
-    ) -> Box<Self> {
+    fn add_custom_bool_attribute(mut self: Box<Self>, key: &'static str, value: bool) -> Box<Self> {
         self.get_dom_element_mut()
             .insert_attribute(key, AttributeValue::BooleanAttribute(value));
         self
