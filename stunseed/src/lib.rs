@@ -5,6 +5,7 @@ pub mod attributes;
 pub mod elements;
 pub mod html;
 mod utils;
+
 pub use stunseed_derive::HtmlElement;
 
 pub mod prelude {
