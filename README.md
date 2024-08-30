@@ -15,5 +15,5 @@ fn component() -> Box<dyn HtmlNode> {
 ```
 
 ## Credits
-- [html crate](https://github.com/yoshuawuyts/html)
 - [askama](https://github.com/djc/askama)
+- [html crate](https://github.com/yoshuawuyts/html)
