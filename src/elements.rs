@@ -1,6 +1,7 @@
 use crate::{
     ast::{DomElement, DomNode},
     html::{HtmlNode, NonVoidHtmlElement},
+    prelude::ContainsGlobalAttributes,
     utils,
 };
 use ammonia::clean;
@@ -77,6 +78,7 @@ pub fn custom_element(name: &'static str) -> Box<CustomElement> {
 }
 
 unsafe impl NonVoidHtmlElement for CustomElement {}
+impl ContainsGlobalAttributes for CustomElement {}
 
 // HTML elements
 include!("generated/gen_elements.rs");
