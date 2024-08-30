@@ -1,6 +1,5 @@
-use std::borrow::Cow;
-
 use crate::ast::{AttributeValue, DomElement, DomNode};
+use std::borrow::Cow;
 
 pub fn html_builder(dom: DomElement, clean: bool) -> String {
     debug_assert_eq!(dom.get_name(), "html");
