@@ -1,5 +1,5 @@
 pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
-    #[doc = "Provides a hint for generating a keyboard shortcut for the current element"]
+    /// Provides a hint for generating a keyboard shortcut for the current element
     #[inline]
     fn access_key<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -12,7 +12,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Controls whether and how text input is automatically capitalized as it is entered/edited by the user"]
+    /// Controls whether and how text input is automatically capitalized as it is entered/edited by the user
     #[inline]
     fn auto_capitalize<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -25,7 +25,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Indicates that an element should be focused on page load, or when the <dialog> that it is part of is displayed"]
+    /// Indicates that an element should be focused on page load, or when the <dialog> that it is part of is displayed
     #[inline]
     fn autofocus(mut self: Box<Self>, value: bool) -> Box<Self> {
         self.get_dom_element_mut().insert_attribute(
@@ -35,7 +35,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "A space-separated list of the case-sensitive classes of the element"]
+    /// A space-separated list of the case-sensitive classes of the element
     #[inline]
     fn class<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -48,7 +48,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Indicates if the element should be editable by the user"]
+    /// Indicates if the element should be editable by the user
     #[inline]
     fn content_editable<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -61,7 +61,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Indicates the directionality of the element's text"]
+    /// Indicates the directionality of the element's text
     #[inline]
     fn direction<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -74,7 +74,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Indicates whether the element can be dragged, either with native browser behavior or the HTML Drag and Drop API."]
+    /// Indicates whether the element can be dragged, either with native browser behavior or the HTML Drag and Drop API.
     #[inline]
     fn draggable(mut self: Box<Self>, value: bool) -> Box<Self> {
         self.get_dom_element_mut().insert_attribute(
@@ -84,7 +84,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Defines what action label (or icon) to present for the enter key on virtual keyboards"]
+    /// Defines what action label (or icon) to present for the enter key on virtual keyboards
     #[inline]
     fn enter_key_hint<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -97,7 +97,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The exportparts global attribute allows you to select and style elements existing in nested shadow trees, by exporting their part names"]
+    /// The exportparts global attribute allows you to select and style elements existing in nested shadow trees, by exporting their part names
     #[inline]
     fn export_parts<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -110,7 +110,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Indicates that the browser should not render the contents of the element"]
+    /// Indicates that the browser should not render the contents of the element
     #[inline]
     fn hidden<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -123,7 +123,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Defines an identifier (ID) which must be unique in the whole document"]
+    /// Defines an identifier (ID) which must be unique in the whole document
     #[inline]
     fn id<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -134,7 +134,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "indicating that the browser will ignore the element"]
+    /// indicating that the browser will ignore the element
     #[inline]
     fn inert(mut self: Box<Self>, value: bool) -> Box<Self> {
         self.get_dom_element_mut()
@@ -142,7 +142,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "hints at the type of data that might be entered by the user while editing the element or its contents"]
+    /// hints at the type of data that might be entered by the user while editing the element or its contents
     #[inline]
     fn input_mode<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -155,7 +155,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "allows you to specify that a standard HTML element should behave like a defined custom built-in element"]
+    /// allows you to specify that a standard HTML element should behave like a defined custom built-in element
     #[inline]
     fn is_<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -166,7 +166,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The itemid global attribute provides microdata in the form of a unique, global identifier of an item"]
+    /// The itemid global attribute provides microdata in the form of a unique, global identifier of an item
     #[inline]
     fn item_id<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -179,7 +179,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The itemprop global attribute is used to add properties to an item"]
+    /// The itemprop global attribute is used to add properties to an item
     #[inline]
     fn item_prop<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -192,7 +192,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "Properties that are not descendants of an element with the itemscope attribute can be associated with an item using the global attribute itemref"]
+    /// Properties that are not descendants of an element with the itemscope attribute can be associated with an item using the global attribute itemref
     #[inline]
     fn item_ref<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -205,7 +205,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "itemscope is a boolean global attribute that defines the scope of associated metadata"]
+    /// itemscope is a boolean global attribute that defines the scope of associated metadata
     #[inline]
     fn item_scope<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -218,7 +218,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The global attribute itemtype specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure"]
+    /// The global attribute itemtype specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure
     #[inline]
     fn item_type<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -231,7 +231,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The lang global attribute helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user"]
+    /// The lang global attribute helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user
     #[inline]
     fn lang<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -244,7 +244,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The nonce global attribute is a content attribute defining a cryptographic nonce (\"number used once\") which can be used by Content Security Policy to determine whether or not a given fetch will be allowed to proceed for a given element"]
+    /// The nonce global attribute is a content attribute defining a cryptographic nonce ("number used once") which can be used by Content Security Policy to determine whether or not a given fetch will be allowed to proceed for a given element
     #[inline]
     fn nonce<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -257,7 +257,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The part global attribute contains a space-separated list of the part names of the element"]
+    /// The part global attribute contains a space-separated list of the part names of the element
     #[inline]
     fn part<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -270,7 +270,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The slot global attribute assigns a slot in a shadow DOM shadow tree to an element: An element with a slot attribute is assigned to the slot created by the <slot> element whose name attribute's value matches that slot attribute's value"]
+    /// The slot global attribute assigns a slot in a shadow DOM shadow tree to an element: An element with a slot attribute is assigned to the slot created by the <slot> element whose name attribute's value matches that slot attribute's value
     #[inline]
     fn slot<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -283,7 +283,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The spellcheck global attribute is an enumerated attribute that defines whether the element may be checked for spelling errors"]
+    /// The spellcheck global attribute is an enumerated attribute that defines whether the element may be checked for spelling errors
     #[inline]
     fn spellcheck<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -296,7 +296,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The style global attribute contains CSS styling declarations to be applied to the element"]
+    /// The style global attribute contains CSS styling declarations to be applied to the element
     #[inline]
     fn style<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -309,7 +309,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The tabindex global attribute allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable (usually with the Tab key, hence the name) and determine their relative ordering for sequential focus navigation"]
+    /// The tabindex global attribute allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable (usually with the Tab key, hence the name) and determine their relative ordering for sequential focus navigation
     #[inline]
     fn tab_index(mut self: Box<Self>, value: i64) -> Box<Self> {
         let mut buffer = itoa::Buffer::new();
@@ -321,7 +321,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The title global attribute contains text representing advisory information related to the element it belongs to"]
+    /// The title global attribute contains text representing advisory information related to the element it belongs to
     #[inline]
     fn title<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -334,7 +334,7 @@ pub trait ContainsGlobalAttributes: crate::html::HtmlElement {
         self
     }
 
-    #[doc = "The translate global attribute is an enumerated attribute that is used to specify whether an element's translatable attribute values and its Text node children should be translated when the page is localized, or whether to leave them unchanged"]
+    /// The translate global attribute is an enumerated attribute that is used to specify whether an element's translatable attribute values and its Text node children should be translated when the page is localized, or whether to leave them unchanged
     #[inline]
     fn translate(mut self: Box<Self>, value: bool) -> Box<Self> {
         self.get_dom_element_mut().insert_attribute(
