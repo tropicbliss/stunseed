@@ -1,13 +1,9 @@
 import json
 import os
 
-def replace_strings(s: str):
-    return s.replace("\"", "\\\"")
-
 def build_int_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     pub fn {function_name}(mut self: Box<Self>, value: i64) -> Box<Self> {{
         let mut buffer = itoa::Buffer::new();
@@ -21,9 +17,8 @@ def build_int_attribute(function_name, doc, canonical):
 """
 
 def build_string_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     pub fn {function_name}<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -38,9 +33,8 @@ def build_string_attribute(function_name, doc, canonical):
 """
 
 def build_float_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     pub fn {function_name}(mut self: Box<Self>, value: f64) -> Box<Self> {{
         let mut buffer = ryu::Buffer::new();
@@ -54,9 +48,8 @@ def build_float_attribute(function_name, doc, canonical):
 """
 
 def build_bool_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     pub fn {function_name}(mut self: Box<Self>, value: bool) -> Box<Self> {{
         self.inner.insert_attribute(
@@ -75,7 +68,9 @@ pub struct {struct_name} {{
     inner: crate::ast::DomElement,
 }}
 
-#[doc = "The HTML `<{element_name}>` element\\n\\n[MDN Documentation]({url_link})"]
+/// The HTML `<{element_name}>` element
+///
+/// {url_link}
 pub fn {element_name}() -> Box<{struct_name}> {{
     Box::new({struct_name} {{
         inner: crate::ast::DomElement::{"new_void" if is_void else "new"}("{element_name}"),

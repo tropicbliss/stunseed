@@ -1,12 +1,8 @@
 import json
 
-def replace_strings(s: str):
-    return s.replace("\"", "\\\"")
-
 def build_int_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     fn {function_name}(mut self: Box<Self>, value: i64) -> Box<Self> {{
         let mut buffer = itoa::Buffer::new();
@@ -20,9 +16,8 @@ def build_int_attribute(function_name, doc, canonical):
 """
 
 def build_float_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     fn {function_name}(mut self: Box<Self>, value: f64) -> Box<Self> {{
         let mut buffer = ryu::Buffer::new();
@@ -36,9 +31,8 @@ def build_float_attribute(function_name, doc, canonical):
 """
 
 def build_string_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     fn {function_name}<T>(mut self: Box<Self>, value: T) -> Box<Self>
     where
@@ -53,9 +47,8 @@ def build_string_attribute(function_name, doc, canonical):
 """
 
 def build_bool_attribute(function_name, doc, canonical):
-    doc = replace_strings(doc)
     return f"""
-#[doc = "{doc}"]
+/// {doc}
     #[inline]
     fn {function_name}(mut self: Box<Self>, value: bool) -> Box<Self> {{
         self.get_dom_element_mut().insert_attribute(
