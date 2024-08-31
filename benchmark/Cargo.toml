@@ -4,11 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+askama = "0.12.1"
+criterion = { version = "0.5", features = ["html_reports"] }
 stunseed = { version = "0.1.0", path = "../stunseed" }
 
-[dev-dependencies]
-criterion = { version = "0.5", features = ["html_reports"] }
-
 [[bench]]
-name = "teams"
+name = "all"
 harness = false

@@ -1,4 +1,4 @@
-use criterion::{criterion_group, criterion_main, Criterion};
+use criterion::{measurement::WallTime, BenchmarkGroup};
 use std::hint::black_box;
 use stunseed::prelude::*;
 
@@ -40,7 +40,38 @@ fn teams_render(teams: &Teams) -> String {
         .build()
 }
 
-fn criterion_benchmark(c: &mut Criterion) {
+fn big_table_render(tablez: &Vec<Vec<usize>>) -> String {
+    html()
+        .child(
+            table().children(
+                tablez
+                    .iter()
+                    .map(|row: &Vec<usize>| {
+                        tr().children(
+                            row.iter()
+                                .map(|col| td().child(text(col.to_string())))
+                                .collect(),
+                        )
+                    })
+                    .collect(),
+            ),
+        )
+        .build()
+}
+
+fn gen_big_table(size: usize) -> Vec<Vec<usize>> {
+    let mut table = Vec::with_capacity(size);
+    for _ in 0..size {
+        let mut inner = Vec::with_capacity(size);
+        for i in 0..size {
+            inner.push(i);
+        }
+        table.push(inner);
+    }
+    table
+}
+
+pub fn bench_teams(group: &mut BenchmarkGroup<'_, WallTime>) {
     let teams = Teams {
         year: 2015,
         teams: vec![
@@ -62,8 +93,12 @@ fn criterion_benchmark(c: &mut Criterion) {
             },
         ],
     };
-    c.bench_function("html_gen", |b| b.iter(|| teams_render(black_box(&teams))));
+    group.bench_function("stunseed", |b| b.iter(|| teams_render(black_box(&teams))));
 }
 
-criterion_group!(benches, criterion_benchmark);
-criterion_main!(benches);
+pub fn bench_big_table(group: &mut BenchmarkGroup<'_, WallTime>) {
+    let big_table = gen_big_table(100);
+    group.bench_function("stunseed", |b| {
+        b.iter(|| big_table_render(black_box(&big_table)))
+    });
+}

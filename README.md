@@ -17,3 +17,4 @@ fn component() -> Box<dyn HtmlNode> {
 ## Credits
 - [askama](https://github.com/djc/askama)
 - [html crate](https://github.com/yoshuawuyts/html)
+- [template-benchmarks-rs](https://github.com/rosetta-rs/template-benchmarks-rs)
