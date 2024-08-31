@@ -13,18 +13,10 @@ fn gen_big_table(size: usize) -> BigTable {
     BigTable { table }
 }
 
-fn big_table(b: &mut criterion::Bencher<'_>, ctx: &BigTable) {
-    b.iter(|| ctx.render().unwrap());
-}
-
 #[derive(Template)]
 #[template(path = "big-table.html")]
 struct BigTable {
     table: Vec<Vec<usize>>,
-}
-
-fn teams(b: &mut criterion::Bencher<'_>, teams: &Teams) {
-    b.iter(|| teams.render().unwrap());
 }
 
 #[derive(Template)]
@@ -40,7 +32,7 @@ struct Team {
 }
 
 pub fn bench_teams(group: &mut BenchmarkGroup<'_, WallTime>) {
-    let team_input = Teams {
+    let ctx = Teams {
         year: 2015,
         teams: vec![
             Team {
@@ -61,10 +53,14 @@ pub fn bench_teams(group: &mut BenchmarkGroup<'_, WallTime>) {
             },
         ],
     };
-    group.bench_with_input("askama", &team_input, teams);
+    group.bench_function("askama", |b| {
+        b.iter(|| ctx.render().unwrap());
+    });
 }
 
 pub fn bench_big_table(group: &mut BenchmarkGroup<'_, WallTime>) {
-    let big_table_input = gen_big_table(100);
-    group.bench_with_input("askama", &big_table_input, big_table);
+    let ctx = gen_big_table(100);
+    group.bench_function("askama", |b| {
+        b.iter(|| ctx.render().unwrap());
+    });
 }
