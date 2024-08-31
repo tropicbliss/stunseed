@@ -2,12 +2,14 @@ pub mod builder;
 pub mod concat_children;
 pub mod constify;
 pub mod custom_element;
+pub mod fragment;
 pub mod include_html;
 pub mod text;
 
 pub use builder::*;
 pub use constify::*;
 pub use custom_element::*;
+pub use fragment::*;
 pub use text::*;
 
 use crate::{

@@ -14,30 +14,33 @@ fn parse_element(
         name,
         attributes,
         children,
+        is_fragment,
     }: DomElement,
     clean: bool,
 ) -> String {
     let mut result = String::with_capacity(70);
-    result.push('<');
-    result.push_str(&name);
-    for (key, value) in attributes {
-        match value {
-            AttributeValue::BooleanAttribute(b) if b => {
-                result.push(' ');
-                result.push_str(&key);
+    if !is_fragment {
+        result.push('<');
+        result.push_str(&name);
+        for (key, value) in attributes {
+            match value {
+                AttributeValue::BooleanAttribute(b) if b => {
+                    result.push(' ');
+                    result.push_str(&key);
+                }
+                AttributeValue::KeyValuePair(s) => {
+                    result.push(' ');
+                    result.push_str(&key);
+                    result.push_str("=\"");
+                    let s = escape_builder(s, clean);
+                    result.push_str(&s);
+                    result.push('"');
+                }
+                _ => {}
             }
-            AttributeValue::KeyValuePair(s) => {
-                result.push(' ');
-                result.push_str(&key);
-                result.push_str("=\"");
-                let s = escape_builder(s, clean);
-                result.push_str(&s);
-                result.push('"');
-            }
-            _ => {}
         }
+        result.push('>');
     }
-    result.push('>');
     if let Some(children) = children {
         let mut last_elem_is_text = false;
         for node in children {
@@ -54,11 +57,17 @@ fn parse_element(
                     result.push_str(&text);
                     last_elem_is_text = true;
                 }
+                DomNode::Html(html) => {
+                    last_elem_is_text = false;
+                    result.push_str(&html);
+                }
             }
         }
-        result.push_str("</");
-        result.push_str(&name);
-        result.push('>');
+        if !is_fragment {
+            result.push_str("</");
+            result.push_str(&name);
+            result.push('>');
+        }
     }
     result.shrink_to_fit();
     result

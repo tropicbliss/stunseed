@@ -4,6 +4,7 @@ use std::{borrow::Cow, collections::HashMap};
 pub enum DomNode {
     Element(DomElement),
     TextNode(Cow<'static, str>),
+    Html(Cow<'static, str>),
 }
 
 #[derive(Clone)]
@@ -11,6 +12,7 @@ pub struct DomElement {
     pub(crate) name: &'static str,
     pub(crate) attributes: HashMap<&'static str, AttributeValue>,
     pub(crate) children: Option<Vec<DomNode>>,
+    pub(crate) is_fragment: bool,
 }
 
 impl DomElement {
@@ -19,6 +21,7 @@ impl DomElement {
             name,
             attributes: HashMap::new(),
             children: Some(Vec::new()),
+            is_fragment: false,
         }
     }
 
@@ -27,6 +30,16 @@ impl DomElement {
             name,
             attributes: HashMap::new(),
             children: None,
+            is_fragment: false,
+        }
+    }
+
+    pub(crate) fn new_fragment() -> Self {
+        DomElement {
+            name: "fragment",
+            attributes: HashMap::new(),
+            children: Some(Vec::new()),
+            is_fragment: true,
         }
     }
 
